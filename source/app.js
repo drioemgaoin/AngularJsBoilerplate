@@ -1,6 +1,6 @@
 'use strict';
 
-var app = angular.module('app', ["app.controllers"]]);
+var app = angular.module('app', ["app.controllers"]);
 app.config(function($routeProvider) {
     $routeProvider.when('/', {
         templateUrl : 'views/home.html',

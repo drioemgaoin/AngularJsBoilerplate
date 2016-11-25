@@ -27,10 +27,12 @@ gulp.task('lint', getTask('lint'));
 gulp.task('build-internal-scripts', getTask('build-internal-scripts'));
 gulp.task('build-views', getTask('build-views'));
 gulp.task('inject-scripts', getTask('inject-scripts'));
+gulp.task('start-server', getTask('start-server'));
 
 gulp.task('build', ["build-internal-scripts", "build-views"]);
 gulp.task('inject', ["inject-scripts"]);
+gulp.task('start-client', ["start-server"], getTask('start-client'));
 
-gulp.task('default', ["clean"], function() {
-    runSequence("build", "inject", "lint");
+gulp.task('default', function() {
+    runSequence("clean", "build", "inject", "lint", "start-client");
 });

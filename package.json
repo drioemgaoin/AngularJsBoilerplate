@@ -2,7 +2,6 @@
   "name": "angular-node-boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate with Angularjs and Nodejs",
-  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -14,7 +13,9 @@
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.1",
+    "gulp-connect": "^5.0.0",
     "gulp-flatten": "^0.3.1",
+    "gulp-if": "^2.0.2",
     "gulp-inject": "^4.1.0",
     "gulp-jshint": "^2.0.4",
     "gulp-load-plugins": "^1.4.0",
@@ -23,6 +24,7 @@
     "gulp-util": "^3.0.7",
     "jshint": "^2.9.4",
     "jshint-stylish": "^2.2.1",
+    "open": "0.0.5",
     "rimraf": "^2.5.4",
     "run-sequence": "^1.2.2"
   }
