@@ -1,0 +1,17 @@
+{
+  "name": "angular-node-boilerplate",
+  "description": "Boilerplate with Angularjs and Nodejs",
+  "main": "app.js",
+  "authors": [
+    "Romain Diegoni"
+  ],
+  "license": "ISC",
+  "homepage": "",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
