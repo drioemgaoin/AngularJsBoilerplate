@@ -28,9 +28,15 @@ Then you need to install the dependencies
 $ npm install && bower install
 ```
 
-Finally, run the following command to build, inject and start the web site
+Finally, to build the solution, you have two choices
+- dev mode: build without minify the javascript/css
 ```
 $ gulp default
+```
+
+- production mode: build and minify the javascript/css  
+```
+$ gulp default --production
 ```
 
 ## Description

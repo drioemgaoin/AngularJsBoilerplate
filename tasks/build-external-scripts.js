@@ -1,5 +1,7 @@
 'use strict';
 
+var argv = require('yargs').argv;
+
 module.exports = function(gulp, plugins, config) {
     return function() {
         var jsFilter = plugins.filter('**/*.js', { restore: true });
@@ -7,7 +9,7 @@ module.exports = function(gulp, plugins, config) {
         return gulp.src('./bower.json')
             .pipe(plugins.mainBowerFiles({ overrides: config.bowerOverrides }))
             .pipe(jsFilter)
-            //.pipe(plugins.uglify())   // TODO: only for production
+            .pipe(plugins.if(argv.production, plugins.uglify()))
             .pipe(plugins.concat('vendor.js'))
             .pipe(gulp.dest(config.deployment.scripts));
     };
