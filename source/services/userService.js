@@ -1,11 +1,11 @@
 'use strict';
 
 angular.module('app')
-  .service('userService', ['userFactory', function(userFactory) {
+  .service('userService', ['userFactory', 'userProvider', function(userFactory, userProvider) {
     this.getAll = function() {
-      return [
-        userFactory.create("name1", "surame1"),
-        userFactory.create("name2", "surame2")
-      ];
+      var users = userProvider.getAll();
+      return users.map(function(user) {
+        return userFactory.create(user.name, user.surname);
+      });
     };
   }]);
