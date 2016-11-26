@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('app')
-  .controller('homeController', ['$scope', function($scope) {
-      $scope.title = "This is an Angular boilerplate";
+  .controller('homeController', ['$scope', 'userFactory', function($scope, userFactory) {
+      $scope.user = userFactory.create("romain", "diegoni");
   }]);
