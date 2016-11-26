@@ -1,6 +1,6 @@
 'use strict';
 
 angular.module('app')
-  .controller('homeController', ['$scope', 'userFactory', function($scope, userFactory) {
-      $scope.user = userFactory.create("romain", "diegoni");
+  .controller('homeController', ['$scope', 'userService', function($scope, userService) {
+      $scope.users = userService.getAll();
   }]);
