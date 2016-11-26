@@ -8,8 +8,8 @@ var root = require('./bower.json').appPath || 'app';
 
 var config = {
     paths: {
-        scripts: './source/app/**/*.js',
-        views: ['./source/**/*.html']
+        scripts: './source/**/*.js',
+        views: ['./source/views/**/*.html']
     },
     deployment: {
         root: './dist',
