@@ -7,11 +7,12 @@ git clone https://github.com/drioemgaoin/AngularMvcBoilerplate.git
 ```
 
 Then you need to install Nodejs to be able to use npm
+
 [NodeJs Installation](https://openclassrooms.com/courses/des-applications-ultra-rapides-avec-node-js/installer-node-js)
 
 To check is node is installed, run this command
 ```
-node -var
+$ node -var
 
 // Output
 v4.4.2
@@ -19,17 +20,17 @@ v4.4.2
 
 Then, you need to install bower by executing this command
 ```
-npm install -g bower
+$ npm install -g bower
 ```
 
 Then you need to install the dependencies
 ```
-npm install && bower install
+$ npm install && bower install
 ```
 
 Finally, run the following command to build, inject and start the web site
 ```
-gulp default
+$ gulp default
 ```
 
 ## Description
