@@ -11,14 +11,15 @@ var config = {
         scripts: './source/**/*.js',
         views: ['./source/views/**/*.html'],
         styles: './source/**/*.scss',
-        fonts: []
+        images: './source/**/*.{jpg,jpeg,png,gif}'
     },
     deployment: {
         root: './dist',
         scripts: './dist/scripts',
         views: './dist/views',
         styles: './dist/css',
-        fonts: './dist/fonts'
+        fonts: './dist/fonts',
+        images: './dist/images',
     },
     bowerOverrides: {
         "font-awesome": {
@@ -42,10 +43,19 @@ gulp.task('build-views', getTask('build-views'));
 gulp.task('build-internal-styles', getTask('build-internal-styles'));
 gulp.task('build-external-styles', getTask('build-external-styles'));
 gulp.task('build-fonts', getTask('build-fonts'));
+gulp.task('build-images', getTask('build-images'));
 gulp.task('inject', getTask('inject'));
 gulp.task('start-server', getTask('start-server'));
 
-gulp.task('build', ["build-internal-scripts", "build-external-scripts", "build-views", "build-internal-styles", "build-external-styles", "build-fonts"]);
+gulp.task('build', [
+    "build-internal-scripts",
+    "build-external-scripts",
+    "build-views",
+    "build-internal-styles",
+    "build-external-styles",
+    "build-fonts",
+    "build-images"
+]);
 gulp.task('start', ["start-server"], getTask('start-client'));
 
 gulp.task('default', function() {
