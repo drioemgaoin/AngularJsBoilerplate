@@ -39,12 +39,13 @@ gulp.task('lint', getTask('lint'));
 gulp.task('build-internal-scripts', getTask('build-internal-scripts'));
 gulp.task('build-external-scripts', getTask('build-external-scripts'));
 gulp.task('build-views', getTask('build-views'));
-gulp.task('build-styles', getTask('build-styles'));
+gulp.task('build-internal-styles', getTask('build-internal-styles'));
+gulp.task('build-external-styles', getTask('build-external-styles'));
 gulp.task('build-fonts', getTask('build-fonts'));
 gulp.task('inject', getTask('inject'));
 gulp.task('start-server', getTask('start-server'));
 
-gulp.task('build', ["build-internal-scripts", "build-external-scripts", "build-views", "build-styles", "build-fonts"]);
+gulp.task('build', ["build-internal-scripts", "build-external-scripts", "build-views", "build-internal-styles", "build-external-styles", "build-fonts"]);
 gulp.task('start', ["start-server"], getTask('start-client'));
 
 gulp.task('default', function() {
