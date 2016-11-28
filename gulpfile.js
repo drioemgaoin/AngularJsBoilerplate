@@ -9,12 +9,14 @@ var root = require('./bower.json').appPath || 'app';
 var config = {
     paths: {
         scripts: './source/**/*.js',
-        views: ['./source/views/**/*.html']
+        views: ['./source/views/**/*.html'],
+        styles: './source/**/*.scss'
     },
     deployment: {
         root: './dist',
         scripts: './dist/scripts',
-        views: './dist/views'
+        views: './dist/views',
+        styles: './dist/css'
     },
     bowerOverrides: {
       bootstrap: {
@@ -37,13 +39,13 @@ gulp.task('lint', getTask('lint'));
 gulp.task('build-internal-scripts', getTask('build-internal-scripts'));
 gulp.task('build-external-scripts', getTask('build-external-scripts'));
 gulp.task('build-views', getTask('build-views'));
-gulp.task('inject-scripts', getTask('inject-scripts'));
+gulp.task('build-styles', getTask('build-styles'));
+gulp.task('inject', getTask('inject'));
 gulp.task('start-server', getTask('start-server'));
 
-gulp.task('build', ["build-internal-scripts", "build-external-scripts", "build-views"]);
-gulp.task('inject', ["inject-scripts"]);
-gulp.task('start-client', ["start-server"], getTask('start-client'));
+gulp.task('build', ["build-internal-scripts", "build-external-scripts", "build-views", "build-styles"]);
+gulp.task('start', ["start-server"], getTask('start-client'));
 
 gulp.task('default', function() {
-    runSequence("clean", "build", "inject", "lint", "start-client");
+    runSequence("clean", "build", "inject", "lint", "start");
 });
