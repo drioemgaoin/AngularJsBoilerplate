@@ -87,6 +87,6 @@ To ensure correctly the build and deployment of your project, I created few gulp
 - **watch**: create a live-update website by listening every changes done in your source directory, launching the corresponding task and refresh the browser to see your changes without a stop/start of your project.
 
 ## Comments
-Don't hesitate to send me any recommendation, suggestions about this boilerplate. I really want to have some returns about does it work well, does it match user expectation, etc.
+Don't hesitate to send me any recommendations, suggestions about this boilerplate. I really want to have some returns about does it work well, does it match user expectation, etc.
 
 You can send me any pull request you want or contact me to my github email and put the repository name in the subject.
