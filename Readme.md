@@ -52,7 +52,7 @@ The tree view of the source directory is the following:
 - **views**: contains all the views of your project (extension .html)
 - **models**: contains all the model of your application. In MVC it means the model used by the view, not directly your domain model.
 - **services**: contains the logic to ensure the functionality expected
-- **providers**: contains the logic to provide datas i.e you can use a provider to call an API or get datas form a database, etc.
+- **providers**: contains the logic to provide datas i.e you can use a provider to call an API or get datas from a database, etc.
 - **images**: contains all the images of your project. The extensions authorized are jpg,jpeg,png,gif. If you want to add a new extensions, don't forget to config in gulpfile.js
 - **styles**: contains all the scss of your project. The tree view uses the [7-1 architecture pattern](https://sass-guidelin.es/#architecture)
 
@@ -85,3 +85,8 @@ To ensure correctly the build and deployment of your project, I created few gulp
 - **start-client**: create/start node client opening the default root (only for production mode).
 - **start-server**: create/start node server with dist directory as a root (only for production mode).
 - **watch**: create a live-update website by listening every changes done in your source directory, launching the corresponding task and refresh the browser to see your changes without a stop/start of your project.
+
+## Comments
+Don't hesitate to send me any recommendation, suggestions about this boilerplate. I really want to have some returns about does it work well, does it match user expectation, etc.
+
+You can send me any pull request you want or contact me to my github email and put the repository name in the subject.
