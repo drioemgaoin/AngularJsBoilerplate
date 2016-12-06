@@ -5,34 +5,10 @@ var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
 var argv = require('yargs').argv;
+var fs = require('fs');
+var config = require("./gulpconfig.json");
 
 var root = require('./bower.json').appPath || 'app';
-
-var config = {
-    paths: {
-        scripts: './source/**/*.js',
-        views: ['./source/views/**/*.html'],
-        styles: './source/**/*.scss',
-        images: './source/**/*.{jpg,jpeg,png,gif}'
-    },
-    deployment: {
-        root: './dist',
-        scripts: './dist/scripts',
-        views: './dist/views',
-        styles: './dist/css',
-        fonts: './dist/fonts',
-        images: './dist/images',
-    },
-    bower: './bower.json',
-    bowerOverrides: {
-        "font-awesome": {
-        "main": [
-          "./scss/font-awesome.scss",
-          "./fonts/*"
-        ]
-      }
-    }
-}
 
 function getTask(task) {
     return require('./tasks/' + task)(gulp, plugins, config);

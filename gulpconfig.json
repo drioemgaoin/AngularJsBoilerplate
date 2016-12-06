@@ -1,0 +1,25 @@
+{
+    "paths": {
+        "scripts": "./source/**/*.js",
+        "views": ["./source/views/**/*.html"],
+        "styles": "./source/**/*.scss",
+        "images": "./source/**/*.{jpg,jpeg,png,gif}"
+    },
+    "deployment": {
+        "root": "./dist",
+        "scripts": "./dist/scripts",
+        "views": "./dist/views",
+        "styles": "./dist/css",
+        "fonts": "./dist/fonts",
+        "images": "./dist/images"
+    },
+    "bower": "./bower.json",
+    "bowerOverrides": {
+        "font-awesome": {
+          "main": [
+            "./scss/font-awesome.scss",
+            "./fonts/*"
+          ]
+        }
+    }
+}

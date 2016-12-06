@@ -79,7 +79,7 @@ To ensure correctly the build and deployment of your project, I created several 
 - **build-views**: copy all the html files in ./dist/views directory except index.html which is copied in ./dist directory.
 - **clean**: remove all files and directories in ./dist directory.
 - **lint**: analyses the code of all the javascript you wrote for the project i.e all the javascript you have created in the ./source directory.
-- **inject**: injects all the css and javascript files present respectively in ./dist/css and ./dost/scripts in the corresponding block ```<!-- inject:js -->``` or ```<!-- inject:css -->```
-- **start-client**:
-- **start-server**:
-- **watch**:
+- **inject**: injects all the css and javascript files present respectively in ./dist/css and ./dist/scripts in the corresponding block ```<!-- inject:js -->``` or ```<!-- inject:css -->```
+- **start-client**: create/start node client opening the default root (only for production mode).
+- **start-server**: create/start node server with dist directory as a root (only for production mode).
+- **watch**: create a live-update website by listening every changes done in your source directory, launching the corresponding task and refresh the browser to see your changes without a stop/start of your project.
