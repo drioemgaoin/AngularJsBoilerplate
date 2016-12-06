@@ -6,13 +6,6 @@ module.exports = function(gulp, plugins, config) {
           root: config.deployment.root,
           livereload: true,
           port: 9000,
-          // middleware: function (connect) {
-          //   return [
-          //     connect().use(
-          //       '/bower_components',
-          //       connect.static('./bower_components')
-          //     )]
-          // }
         });
     };
 };
