@@ -4,6 +4,7 @@ var gulp = require('gulp');
 var plugins = require('gulp-load-plugins')();
 var runSequence = require('run-sequence');
 var browserSync = require('browser-sync').create();
+var argv = require('yargs').argv;
 
 var root = require('./bower.json').appPath || 'app';
 
@@ -59,8 +60,13 @@ gulp.task('build', [
     "build-fonts",
     "build-images"
 ]);
-gulp.task('start', ["start-server"], getTask('start-client'));
+
+if (argv.production) {
+  gulp.task('start', ["start-server"], getTask('start-client'));
+} else {
+  gulp.task('start', getTask('watch'));
+}
 
 gulp.task('default', function() {
-    runSequence("clean", "build", "inject", "start", "watch");
+    runSequence("clean", "build", "inject", "start");
 });
