@@ -89,4 +89,4 @@ To ensure correctly the build and deployment of your project, I created few gulp
 ## Comments
 Don't hesitate to send me any recommendations, suggestions about this boilerplate. I really want to have some returns about does it work well, does it match user expectation, etc.
 
-You can send me any pull request you want or contact me to my github email and put the repository name in the subject.
+You can send me any issues you want or contact me to my github email and put the repository name in the subject.
